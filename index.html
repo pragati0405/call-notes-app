@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head> <body>
+
+<form id="callForm" class="modal-form">
+    <div class="form-header">
+        <h1>New Call</h1>
+    </div>
+
+    <div class="form-group">
+        <label>Image URL</label>
+        <input id="img" required type="text" placeholder="Image URL">
+    </div>
+
+    <div class="form-group">
+        <label>Full Name</label>
+        <input id="name" required type="text" placeholder="Enter Full Name">
+    </div>
+
+    <div class="form-group">
+        <label>Home Town</label>
+        <input id="town" required type="text" placeholder="Enter Home Town">
+    </div>
+
+    <div class="form-group">
+        <label>Purpose</label>
+        <input id="purpose" required type="text" placeholder="e.g. Quick appointment note">
+    </div>
+
+    <div class="category-group">
+        <small>Category</small>
+        <div class="radio-options">
+            <label><input type="radio" name="category" value="emergency"> Emergency</label>
+            <label><input type="radio" name="category" value="important"> Important</label>
+            <label><input type="radio" name="category" value="urgent"> Urgent</label>
+            <label><input type="radio" name="category" value="no-rush"> No Rush</label>
+        </div>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn-create">Create Note</button>
+        <button type="button" class="btn-close">Close</button>
+    </div>
+</form>
+
+
+<div class="container">
+
+     <div class="left">
+        <button id="add_note" class="icon-btn">+</button>
+        <button id="prev_btn" class="icon-btn">↑</button>
+        <button id="next_btn" class="icon-btn">↓</button>
+    </div>
+    <!-- ONLY CARD RENDER AREA -->
+    <div id="cards-container"></div>
+
+    <div class="right">
+        <div class="dot emergency"></div>
+        <div class="dot important"></div>
+        <div class="dot urgent"></div>
+        <div class="dot norush"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

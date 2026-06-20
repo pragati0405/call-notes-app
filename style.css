@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #706262;
+    min-height: 100vh;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.card-wrapper {
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+
+.card {
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #dbdbe2;
+    border: 1px solid rgb(172, 136, 136);
+    box-shadow: 0 8px 32px rgba(53, 50, 50, 0.12);
+    text-transform: capitalize;
+}
+
+.back { top: 20px; z-index: 1; }
+.middle { top: 10px; z-index: 2; }
+.front { top: 0; z-index: 3; }
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.details {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.detail span:first-child {
+    color: gray;
+}
+
+.detail span:last-child {
+    font-weight: 600;
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.action button {
+    flex: 1;
+}
+
+/* Common Button */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #141414;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Left Panel */
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.left button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+/* Right Panel */
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.emergency { background: #d14545; }
+.important { background: #e0a639; }
+.urgent { background: #33e4db; }
+.norush { background: #71e071; }
+
+ /* form */
+
+.modal-form {
+    display: none; 
+    flex-direction: column; 
+    gap: 15px;  
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;  
+    border-radius: 15px;
+    background: rgba(45, 35, 35, 0.8);  
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1000;
+}
+
+.form-header h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+.category-group small {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-actions button {
+    flex: 1; 
+    margin: 0;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.btn-create {
+    background-color: #6874d1;
+}
+
+.btn-close {
+    background-color: #6874d1;}
